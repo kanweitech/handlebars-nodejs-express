@@ -17,8 +17,10 @@ app.engine('hbs', handlebars({
 
 app.use(express.static('public'));
 
+const fakeApi = () => 'faker';
+
 app.get('/', (req, res) => {
-    res.render('main', {layout: 'planB'});
+    res.render('main', {layout: 'index', proPlayer: fakeApi()});
 });
 
 app.listen(port, () => {
