@@ -10,13 +10,15 @@ app.set('view engine', 'hbs');
 
 app.engine('hbs', handlebars({
   layoutsDir: `${__dirname}/views/layouts`,
-  extname: 'hbs'  
+  extname: 'hbs',
+  defaultLayout: 'index',
+  partialsDir: `${__dirname}/views/partials`  
 }));
 
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('main', {layout: 'index'});
+    res.render('main', {layout: 'planB'});
 });
 
 app.listen(port, () => {
