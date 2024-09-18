@@ -1,0 +1,22 @@
+{
+  "name": "handlebars-with-nodejs-and-express",
+  "version": "1.0.0",
+  "description": "A simple project using handlebars with nodejs and express",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "handlebars",
+    "nodejs",
+    "express"
+  ],
+  "author": "kanweitech",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-handlebars": "^7.1.3",
+    "nodemon": "^3.1.5"
+  }
+}
