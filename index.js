@@ -17,10 +17,35 @@ app.engine('hbs', handlebars({
 
 app.use(express.static('public'));
 
-const fakeApi = () => 'faker';
+const fakeApi = () => {
+    return [
+        {
+            name: 'katrina',
+            lane: 'midlaner'
+        },
+        {
+            name: 'Jayce',
+            lane: 'toplaner'
+        },
+        {
+            name: 'Heimerdinger',
+            lane: 'toplaner'
+        },
+        {
+            name: 'Gamos',
+            lane: 'midlaner'
+        },
+        {
+            name: 'Russ',
+            lane: 'midlaner'
+        }
+    ]
+}
+
+const list = false;
 
 app.get('/', (req, res) => {
-    res.render('main', {layout: 'index', proPlayer: fakeApi()});
+    res.render('main', {layout: 'index', suggestedChamps: fakeApi(), listExists: list});
 });
 
 app.listen(port, () => {
