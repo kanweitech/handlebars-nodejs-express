@@ -6,10 +6,11 @@ const port = 5000;
 
 const handlebars = require('express-handlebars').engine;
 
-app.set('view engine', 'handlebars');
+app.set('view engine', 'hbs');
 
-app.engine('handlebars', handlebars({
-  layoutsDir: `${__dirname}/views/layouts`  
+app.engine('hbs', handlebars({
+  layoutsDir: `${__dirname}/views/layouts`,
+  extname: 'hbs'  
 }));
 
 app.use(express.static('public'));
